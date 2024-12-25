@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 230 100% 98%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 345 85% 65%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 226 100% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 345 85% 65%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 345 85% 65%;
+    --radius: 0.5rem;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(226, 100%, 15%, 0.2);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(345, 85%, 65%, 0.5);
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(345, 85%, 65%, 0.8);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, 
+    hsl(226, 100%, 15%) 0%,
+    hsl(226, 95%, 18%) 25%,
+    hsl(345, 85%, 35%) 50%,
+    hsl(226, 95%, 18%) 75%,
+    hsl(226, 100%, 15%) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.static-gradient-bg {
+  background: linear-gradient(135deg,
+    hsl(226, 100%, 15%) 0%,
+    hsl(226, 95%, 18%) 40%,
+    hsl(345, 85%, 35%) 100%
+  );
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

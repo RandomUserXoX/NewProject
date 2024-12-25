@@ -1,0 +1,1 @@
+// This file can be removed as its functionality is now handled by gemini/config.ts

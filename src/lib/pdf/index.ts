@@ -1,0 +1,1 @@
+export { extractTextFromPDF } from './extractor';
